@@ -8,6 +8,8 @@ from lstm_model import LSTMModel, TimeSeriesDataset, DataLoader, train_lstm, eva
 from molecular_docking import download_pdb, prepare_ligand, convert_to_pdbqt, run_autodock_vina, analyze_docking_results, sensitivity_analysis, validate_against_database
 from statistical_analysis import compare_groups, kaplan_meier_survival, cox_proportional_hazards, mixed_effects_model, evaluate_regression_predictions, landmark_analysis, counterfactual_analysis
 
+np.random.seed(42)
+
 def main():
     # Data Preprocessing
     df = load_seer_medicare_data('seer_medicare.csv')
